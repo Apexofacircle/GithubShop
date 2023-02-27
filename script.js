@@ -21,7 +21,7 @@ function batman(){
             dataType: "text",
             success: function (response) {
                 console.log(response)
-                $("body").html("<pre>" + response)
+                $("body").html("<pre>" + response + "</pre>")
             }
         });
 
