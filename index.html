@@ -18,5 +18,42 @@
     </button>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript" src="Githunshop/script.js"></script>\
+<Script>$("p").html("this")
+
+    var is_Batman = true;
+    var InfoToDisplay = "None";
+    function batman(){
+        // if(is_Batman){
+        //     $(this).html("Batman");
+        //     console.log("Batman");
+        //     is_Batman = false;
+        // }
+        // else{
+        //     $(this).html("Not batman");
+        //     console.log("Not batman");
+             is_Batman = true;
+    
+           // get info from a webpage/file
+            $.ajax({
+                type: "get",
+                url: "https://raw.githubusercontent.com/Apexofacircle/Arduino/main/Claw.Cpp",
+                data: "data",
+                dataType: "text",
+                success: function (response) {
+                    console.log(response)
+                    $("body").html("<pre>" + response + "</pre>")
+                }
+            });
+    
+            
+        // }
+        
+        // look into events and ready functions
+    
+    
+        $(body).html()
+    }
+    
+    $("button").click(batman)</Script>
 </html>
