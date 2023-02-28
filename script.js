@@ -20,7 +20,7 @@ function batman(){
 
 
         var img = new Image();
-        img.src = "https://raw.githubusercontent.com/Apexofacircle/GitShopProduct1/main/825d0083-a449-4dfe-a616-5bc6a99138a5.png";
+        img.src = "_DNSJson.RepoInfo.Img";
         document.body.append(img);
 }
 
