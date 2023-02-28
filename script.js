@@ -1,4 +1,4 @@
-$("p").html("this")
+
 
 
 var _DNSJson = {}
@@ -13,17 +13,16 @@ $.ajax({
       console.log(msg)
       _DNSJson = msg
       console.log(_DNSJson.RepoInfo.Img)
+      $("p").html(_DNSJson.RepoInfo.Description)
+      $("h5").html(_DNSJson.RepoInfo.Name)
+      
     });
 
-function batman(){
-        
+    function GetCardImage(){
+        console.log("Getting Image...")
+        $(this).html("<img src=" + _DNSJson.RepoInfo.Img + " class=" + "card-img-top" + "alt=" + "..." + ">")
+    }
 
-        
-
-
-        var img = new Image();
-        img.src = _DNSJson.RepoInfo.Img;
-        document.body.append(img);
-}
-
-$("Batman").click(batman)
+    var img = new Image();
+    img.src = _DNSJson.RepoInfo.Img;
+    document.body.append(img);
