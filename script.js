@@ -1,28 +1,24 @@
+var _DNSJson = {};
+var documentFragment = document.createDocumentFragment();
 
+function temp(img) {     document.getElementById("CardImage1").appendChild(img).style = "width : 100%" }
+$.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitShopProduct1/main/GitShopInfo.json",dataType: "json"})
+.done(function( msg ) {
+    _DNSJson = msg
 
+    console.log(_DNSJson.RepoInfo.Img)
 
-var _DNSJson = {}
-var is_Batman = true;
-var InfoToDisplay = "None";
-$.ajax({
-    method: "get",
-    url: "https://raw.githubusercontent.com/Apexofacircle/GitShopProduct1/main/GitShopInfo.json",
-    dataType: "json"
-  })
-    .done(function( msg ) {
-      console.log(msg)
-      _DNSJson = msg
-      console.log(_DNSJson.RepoInfo.Img)
-      $("p").html(_DNSJson.RepoInfo.Description)
-      $("h5").html(_DNSJson.RepoInfo.Name)
-      
-    });
+    $("p").html(_DNSJson.RepoInfo.Description)
+    $("h5").html(_DNSJson.RepoInfo.Name)
+    
+    console.log("Loading")
+    
+    var _img = new Image();
+    _img.src = _DNSJson.RepoInfo.Img;
 
-    function GetCardImage(){
-        console.log("Getting Image...")
-        $(this).html("<img src=" + _DNSJson.RepoInfo.Img + " class=" + "card-img-top" + "alt=" + "..." + ">")
-    }
-
-    var img = new Image();
-    img.src = _DNSJson.RepoInfo.Img;
-    document.body.append(img);
+    document.getElementById("CardImage2").appendChild(_img.cloneNode(true)).style = "width : 100%"
+    document.getElementById("CardImage1").appendChild(_img.cloneNode(true)).style = "width : 100%"
+    document.getElementById("CardImage3").appendChild(_img.cloneNode(true)).style = "width : 100%"
+    document.getElementById("CardImage4").appendChild(_img.cloneNode(true)).style = "width : 100%"
+    
+});
