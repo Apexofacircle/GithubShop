@@ -2,30 +2,19 @@ body{
     background-color: black;
 }
 
-div.card1{
+.card{
     width: 25%;
     padding: 15px;
     float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
 }
 
-div.card2{
-    width: 25%;
-    padding: 15px;
-    float: left;
+.CardImg{
+    width: 100%;
 }
-
-div.card3{
-    width: 25%;
-    padding: 15px;
-    float: left;
-}
-
-div.card4{
-    width: 25%;
-    padding: 15px;
-    float: left;
-}
-
 
 .offcanvas{
     background-color: rgb(20, 0, 44);
@@ -33,3 +22,17 @@ div.card4{
     height: 100%;
     width: 100%;
 }
+
+
+/* var template = '<li><span><a href="'+linkHref+'">'+textValue+'</a></span></li>';
+    $('#template').appendChild(template);
+
+    if ( scorecard.what_changed.length ) {
+        scorecard.what_changed.forEach( ( item ) => {
+            let newLI = document.createElement( 'li' ); // <li>
+            let newSpan = document.createElement( 'span' ); // <span>
+            let newImg = document.createElement( 'img' ); // <img>
+            let text = item.list_item ? item.list_item : item; // { list_i
+var data = [];
+Mike Garrett10:07 AM
+var data = [ 'one', 'two' ]; */

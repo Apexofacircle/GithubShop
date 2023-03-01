@@ -1,24 +1,32 @@
 var _DNSJson = {};
-var documentFragment = document.createDocumentFragment();
 
-function temp(img) {     document.getElementById("CardImage1").appendChild(img).style = "width : 100%" }
 $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitShopProduct1/main/GitShopInfo.json",dataType: "json"})
 .done(function( msg ) {
     _DNSJson = msg
 
-    console.log(_DNSJson.RepoInfo.Img)
+    // Cards
+    for(var i in _DNSJson)
+    {
+        console.log(i)
+        console.log(_DNSJson)
 
-    $("p").html(_DNSJson.RepoInfo.Description)
-    $("h5").html(_DNSJson.RepoInfo.Name)
-    
-    console.log("Loading")
-    
-    var _img = new Image();
-    _img.src = _DNSJson.RepoInfo.Img;
 
-    document.getElementById("CardImage2").appendChild(_img.cloneNode(true)).style = "width : 100%"
-    document.getElementById("CardImage1").appendChild(_img.cloneNode(true)).style = "width : 100%"
-    document.getElementById("CardImage3").appendChild(_img.cloneNode(true)).style = "width : 100%"
-    document.getElementById("CardImage4").appendChild(_img.cloneNode(true)).style = "width : 100%"
-    
+        var _DNSSection = _DNSJson[i]
+
+
+        var _Image = _DNSSection["Img"]
+        var _Name = _DNSSection["Name"]
+        var _Description = _DNSSection["Description"]
+
+        console.log(_Image)
+
+
+        var _Card = ('<<div class="card"><div id="CardImage"><img src="'+_Image+'" alt="" class = "CardImg"></div><div class="card-body"><h5 class="card-title">'+_Name+'</h5><p class="card-text">'+_Description+'</p><a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" ID="ExpandData">Link with href</a></div></div>');
+        $("Cards").append(_Card);
+    }
+
+    // Detailed info
+    $("#ExpandData").click(function test() { 
+        console.log("test work")
+    });
 });
