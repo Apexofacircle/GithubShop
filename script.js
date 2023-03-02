@@ -64,6 +64,13 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
 
             $("OffCanvasDetail").html(_OCText)
             $("DisplayImage").html(_OCImage)
+
+            $("DisplayImage").append('<nav aria-label="Page navigation example">'+
+            '<ul class="pagination fillWidth">'+
+              '<li class="page-item"><a class="page-link" href="#">Download</a></li>'+
+              '<li class="page-item"><a class="page-link" href="#">Source</a></li>'+
+            '</ul>'+
+          '</nav>')
         }
     }, 500);
     

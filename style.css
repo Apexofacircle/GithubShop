@@ -24,6 +24,10 @@ OffCanvasDetail{
     border-width: 5px;
 }
 
+.fillWidth{
+    width: 100%;
+}
+
 .CardImg{
     width: 100%;
 }
