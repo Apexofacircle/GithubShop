@@ -33,7 +33,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
                             '<h5 class="card-title">'+_Name+'</h5>'+
                             '<p class="card-text">'+_Description+'</p>'+
                             '<a href="#'+_Name+'"><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">'+
-                            ' test '+
+                            'More'+
                             '</button></a>'+
                         '</div>'+
                     '</div>';
