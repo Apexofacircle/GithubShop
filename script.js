@@ -21,7 +21,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
         var _Image = _DNSSection["Img"]
         var _Name = _DNSSection["Name"]
         var _Description = _DNSSection["Description"]
-        var _Detailed_Description = _DNSSection["Detailed_Description"]
+       
         console.log(_Image)
 
 
@@ -40,7 +40,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
         $("Cards").append(_Card);
     }
 
-    // Hold URL on load
+
     let currentPage = null;
 
     // listen for changes
@@ -62,13 +62,19 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
             var _OCText = '<P>'+_DetailedInfo["DetailedDescription"]+'</p>'
             var _OCImage = '<img src="'+_DetailedInfo["Img"]+'" alt="" class = "OCImg">'
 
+
+            //Get download and source
+            var _Source = _DetailedInfo["Source"]
+            var _Download = _DetailedInfo["Download"]
+
+
             $("OffCanvasDetail").html(_OCText)
             $("DisplayImage").html(_OCImage)
 
             $("DisplayImage").append('<nav aria-label="Page navigation example">'+
             '<ul class="pagination fillWidth">'+
-              '<li class="page-item"><a class="page-link" href="#">Download</a></li>'+
-              '<li class="page-item"><a class="page-link" href="#">Source</a></li>'+
+              '<li class="page-item"><a class="page-link" href="https://'+_Download+'">Download</a></li>'+
+              '<li class="page-item"><a class="page-link" href="https://'+_Source+'">Source</a></li>'+
             '</ul>'+
           '</nav>')
         }
