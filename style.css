@@ -14,15 +14,43 @@ OffCanvasDetail{
 .OCImg{
     width: 250px;
 }
-.card{
-    width: 25%;
-    padding: 15px;
+@media (min-width: 575.98px) { 
+    .card{
+        width: 100%;
+        float: left;
+        border-radius: 15px;
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        } 
+}
+
+@media (min-width: 576px) { .card{
+    width: 50%;
     float: left;
     border-radius: 15px;
     border-style: solid;
     border-color: black;
     border-width: 5px;
-}
+    }  }
+
+@media (min-width: 992px) { .card{
+    width: 25%;
+    float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    }  }
+
+@media (min-width: 1200px) { .card{
+    width: 20%;
+    float: left;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    } }
 
 .fillWidth{
     width: 100%;
