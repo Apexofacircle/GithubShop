@@ -1,6 +1,6 @@
 var _DNSJson = {};
 
-function test(){
+window.test = function(){
     console.log("Test")
 }
 
@@ -32,9 +32,9 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
                         '<div class="card-body">'+
                             '<h5 class="card-title">'+_Name+'</h5>'+
                             '<p class="card-text">'+_Description+'</p>'+
-                            '<a href="#'+_Name+'"><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">'+
-                            'More'+
-                            '</button></a>'+
+                            '<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" onclick="test">'+
+                            ''+
+                            '</button>'+
                         '</div>'+
                     '</div>';
         $("Cards").append(_Card);
@@ -50,7 +50,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
         {
             //Gets the ID in the webpage
             currentPage = location.href;
-            var _Href = window.location.href.split("#")[1]
+            var _Href = currentPage.split("#")[1]
             
             // Display title
             var _OCTitle = '<h1>'+_Href+'</h1>'
