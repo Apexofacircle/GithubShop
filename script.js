@@ -1,6 +1,6 @@
 var _DNSJson = {};
 
-window.test = function(){
+function test(){
     console.log("Test")
 }
 
@@ -25,23 +25,23 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
         console.log(_Image)
 
 
-        var _Card = '<div class="card">' +
+        var _Card = '<div class="card" id='+_Name+'>' +
                         '<div id="CardImage">' +
                             '<img src="'+_Image+'" alt="" class = "CardImg">'+
                         '</div>'+
                         '<div class="card-body">'+
                             '<h5 class="card-title">'+_Name+'</h5>'+
                             '<p class="card-text">'+_Description+'</p>'+
-                            '<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" onclick="test">'+
-                            ''+
-                            '</button>'+
+                            '<a href="#'+_Name+'"><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" OnClick="test()">'+
+                            'More'+
+                            '</button></a>'+
                         '</div>'+
                     '</div>';
         $("Cards").append(_Card);
     }
 
     // Hold URL on load
-    let currentPage = location.href;
+    let currentPage = null;
 
     // listen for changes
     setInterval(function()
