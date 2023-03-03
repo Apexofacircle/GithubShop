@@ -72,6 +72,9 @@ OffCanvasDetail{
     height: 100%;
     width: 100%;
 }
+.offcanvas.show {
+    visibility: visible;
+}
 
 .offcanvas-header .btn-close{
 background-image: url("/temp.svg");
