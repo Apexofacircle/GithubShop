@@ -17,7 +17,7 @@ OffCanvasDetail{
 
 .card:hover{
     border-width: 0px;
-    transition: 0.25;
+    transition: 0.5;
 }
 
 @media (min-width: 575.98px) { 
@@ -75,4 +75,11 @@ OffCanvasDetail{
 
 .offcanvas-header .btn-close{
 background-image: url("/temp.svg");
+}
+
+.CantSelect{
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
 }

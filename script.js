@@ -25,7 +25,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
         console.log(_Image)
 
 
-        var _Card = '<div class="card" id='+_Name+'>' +
+        var _Card = '<div class="card CantSelect" id='+_Name+'>' +
                         '<div id="CardImage">' +
                             '<img src="'+_Image+'" alt="" class = "CardImg">'+
                         '</div>'+
