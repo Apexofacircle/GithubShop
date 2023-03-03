@@ -116,14 +116,16 @@ function renderModal(product) {
     console.log(_DetailedInfo)
     var _OCText = '<P>'+_DetailedInfo["DetailedDescription"]+'</p>'
     var _OCImage = '<img src="'+_DetailedInfo["Img"]+'" alt="" class = "OCImg">'
+    var _Source = _DetailedInfo["Source"]
+    var _Download = _DetailedInfo["Download"]
 
     $("OffCanvasDetail").html(_OCText)
     $("DisplayImage").html(_OCImage)
 
     $("DisplayImage").append('<nav aria-label="Page navigation example">'+
     '<ul class="pagination fillWidth">'+
-    '<li class="page-item"><a class="page-link" href="#">Download</a></li>'+
-    '<li class="page-item"><a class="page-link" href="#">Source</a></li>'+
+    '<li class="page-item"><a class="page-link" href="https://'+_Download+'">Download</a></li>'+
+    '<li class="page-item"><a class="page-link" href="https://'+_Source+'">Source</a></li>'+
     '</ul>'+
     '</nav>');
 }

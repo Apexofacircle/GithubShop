@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    font-family: 'Lato', sans-serif;
 }
 
 DisplayImage{
@@ -11,6 +12,11 @@ DisplayImage{
 OffCanvasDetail{
     text-align: center;
 }
+
+.color-shell{
+    color:rgb(243, 240, 240)
+}
+
 .OCImg{
     width: 250px;
 }
