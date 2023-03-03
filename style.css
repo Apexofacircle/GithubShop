@@ -70,16 +70,3 @@ OffCanvasDetail{
 .offcanvas-header .btn-close{
 background-image: url("/temp.svg");
 }
-
-/* var template = '<li><span><a href="'+linkHref+'">'+textValue+'</a></span></li>';
-    $('#template').appendChild(template);
-
-    if ( scorecard.what_changed.length ) {
-        scorecard.what_changed.forEach( ( item ) => {
-            let newLI = document.createElement( 'li' ); // <li>
-            let newSpan = document.createElement( 'span' ); // <span>
-            let newImg = document.createElement( 'img' ); // <img>
-            let text = item.list_item ? item.list_item : item; // { list_i
-var data = [];
-Mike Garrett10:07 AM
-var data = [ 'one', 'two' ]; */
