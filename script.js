@@ -63,7 +63,7 @@ $.ajax({method: "get",url: "https://raw.githubusercontent.com/Apexofacircle/GitS
     // When the page loads, check if there is a hash in the URL. If there is, render the modal.
     // This allows the modal to show on initial page load if the URL has a hash.
     if(_Href != undefined) {
-        // Moving this to a function helps with orangization. 
+        // Moving this to a function helps with organization. 
         renderModal(_Href);
         myOffcanvas.show();
     }
